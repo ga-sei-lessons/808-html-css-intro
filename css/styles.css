@@ -7,10 +7,27 @@ h1, h2 {
     color: hotpink;
 }
 
+.half-parent {
+    width: 50%;
+    background-color: blue;
+}
+
+.half-page {
+    /* always half of the availible view area of the screen */
+    width: 50vw;
+    background-color: blanchedalmond;
+}
+
 /* . = class to apply */
 .color-box {
     height: 400px;
-    width: 400px;
+    /* percentages are relative to size of parent */
+    /* 
+    vh = view height
+    vw = veiw width
+    rem = relative to root font size
+    */
+    width: 50%;
     /* css color types */
     /* named css color */
     /* background-color: red; */
@@ -18,5 +35,109 @@ h1, h2 {
     /* rgb(red value 0 - 255, green value 0 - 255, blue value 0 - 255) */
     /* background-color: rgb(85, 175, 96); */
     /* rgb(red value 0 - 255, green value 0 - 255, blue value 0 - 255, alpha 0 - 1) */
-    background-color: rgba(10, 24, 96, 0.168);
+    /* background-color: rgba(10, 24, 96, 0.168); */
+    background-color: #b82e2e;
+}
+
+/* 
+BOX MODEL 
+*/
+
+.green-box {
+    background-color: green;
+}
+
+/* space AROUND and element */
+.margin {
+    /* 
+    verbose way
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px; 
+    */
+    /* 
+    using 4 values with margin
+    margin: top right bottom left 
+    */
+    /* margin: 50px 75px 65px 100px; */
+    /* 
+    giving margin 2 values
+    margin: top-bottom side-side;
+    */
+    margin: 50px 100px;
+}
+
+.center {
+    /* 
+    center block elements
+    margin: top-bottom: 0, side-side: auto;
+    auto take up the max space availible
+    */
+    margin: 0 auto;
+    /* center inline elements */
+    text-align: center;
+}
+/* this is the edge of the element */
+.border {
+    /* border: width style color; */
+    border: 20px dotted white;
+    /* 
+        also works:
+        border-left
+        border-right
+    */
+}
+/* padding is between the element and the border */
+.padding {
+    /* 
+    padding: top right bottom left 
+    padding top-bottom left-right
+    padding: all-around;
+    */
+    /* padding: 5px 20px 100px 45px; */
+    padding: 50px;
+}
+
+/*
+CSS DISPLAY
+*/
+
+/* governs the position of elements on the page */
+
+.display-examp {
+    width: 30vw;
+    height: 30vh;
+    background-color: purple;
+}
+
+/* static = defualt position (goes with the flow of the page */
+/* .static {} */
+
+/* specify with units of measure how far from defualt position to move */
+.relative {
+    position: relative;
+    /* move away from defualt left position */
+    left: 50%;
+    /* move down from defualt position */
+    top: 500px;
+}
+
+/* poisition relative to browser window -- breaks flow of page 
+scrolls with the user
+*/
+.fixed {
+    position: fixed;
+    left: 80vw;
+    /* stuck on bottom of page */
+    /* bottom: 0; */
+    /* stuck on top of page */
+    top: 0;
+}
+
+/* 
+specify coordinates where it will go relative to parent 
+*/
+.absolute {
+    position: absolute;
+    left: 100px;
 }
