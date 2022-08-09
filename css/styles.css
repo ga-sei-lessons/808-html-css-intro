@@ -1,0 +1,22 @@
+body {
+    background-color: chartreuse;
+}
+
+/* selecting multiple elements */
+h1, h2 {
+    color: hotpink;
+}
+
+/* . = class to apply */
+.color-box {
+    height: 400px;
+    width: 400px;
+    /* css color types */
+    /* named css color */
+    /* background-color: red; */
+    /* rgb = red green blue (css function) */
+    /* rgb(red value 0 - 255, green value 0 - 255, blue value 0 - 255) */
+    /* background-color: rgb(85, 175, 96); */
+    /* rgb(red value 0 - 255, green value 0 - 255, blue value 0 - 255, alpha 0 - 1) */
+    background-color: rgba(10, 24, 96, 0.168);
+}
